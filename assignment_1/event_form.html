@@ -13,86 +13,89 @@
 <body>
     <h1>Event Registration Form</h1>
     <hr>
-    <!-- Select field -->
-    <p for="quantity">How many people are you buying tickets for?</p>
-    <select id="quantity">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-    </select>
-    <br>
-    <!-- Display as a 2 column layout -->
-    <div style="display: flex;">
-        <div style="width: 50%;">
-            <!-- Radio button field(1st column) -->
-            <p>T-Shirt Choice</p>
-            <input type="radio" id="yes" value="Yes">
-            <label for="yes">Yes</label><br>
-            <input type="radio" id="nah" value="Nah!">
-            <label for="nah">Nah!</label>
-        </div>
-        <!-- Radio button field(2nd column) -->
-        <div style="width: 50%;">
-            <p>T-Shirt Size</p>
-            <input type="radio" id="s" value="S">
-            <label for="s">S</label>
-            <input type="radio" id="m" value="M">
-            <label for="m">M</label>
-            <input type="radio" id="l" value="L">
-            <label for="l">L</label><br>
-            <input type="radio" id="xl" value="XL">
-            <label for="xl">XL</label>
-            <input type="radio" id="xxl" value="XXL">
-            <label for="xxl">XXL</label>
-            <input type="radio" id="3xl" value="3XL">
-            <label for="3xl">3XL</label>
-        </div>
-    </div>
-    <hr>
-    <h4>About you</h4>
-    <p>We will be mailing tickets to your email address</p>
-    <br>
-    <!-- Text field type -->
-    <label><b>Name</b><span style="color: red;">*</span></label><br>
-    <div style="display: flex; flex-direction: row;">
-        <div><input type="text"><br><small>First</small></div>
-        <div><input type="text"><br><small>Last</small></div>
-    </div>
-    <br>
-    <!-- Text field type, with a certain width -->
-    <div style="width: 720px;">
-        <label><b>Address</b><span style="color: red;">*</span></label><br>
-        <input type="text" style="width: 720px;">
-        <br><br>
-        <!-- Render successive div elements horizontally -->
-        <div style="display: flex; flex-direction: row;">
-            <div><input type="text"><br><small>City</small></div>
-            <div><input type="text"><br><small>State</small></div>
-        </div>
+    <form action="#" accept-charset="utf-8">
+        <!-- Select field -->
+        <p for="quantity">How many people are you buying tickets for?</p>
+        <select id="quantity">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
         <br>
-        <!-- Render successive div elements horizontally -->
-        <div style="display: flex; flex-direction: row;">
-            <div><input type="text"><br><small>Postal code</small></div>
-            <div>
-                <select id="country">
-                    <option value=""></option>
-                    <option value="India">India</option>
-                    <option value="America">America</option>
-                    <option value="UK">UK</option>
-                </select><br>
-                <small>Country</small>
+        <!-- Display as a 2 column layout -->
+        <div style="display: flex;">
+            <div style="width: 50%;">
+                <!-- Radio button field(1st column) -->
+                <p>T-Shirt Choice</p>
+                <input type="radio" id="yes" value="Yes">
+                <label for="yes">Yes</label><br>
+                <input type="radio" id="nah" value="Nah!">
+                <label for="nah">Nah!</label>
+            </div>
+            <!-- Radio button field(2nd column) -->
+            <div style="width: 50%;">
+                <p>T-Shirt Size</p>
+                <input type="radio" id="s" value="S">
+                <label for="s">S</label>
+                <input type="radio" id="m" value="M">
+                <label for="m">M</label>
+                <input type="radio" id="l" value="L">
+                <label for="l">L</label><br>
+                <input type="radio" id="xl" value="XL">
+                <label for="xl">XL</label>
+                <input type="radio" id="xxl" value="XXL">
+                <label for="xxl">XXL</label>
+                <input type="radio" id="3xl" value="3XL">
+                <label for="3xl">3XL</label>
             </div>
         </div>
-    </div>
-    <br><br>
-    <label><b>Email</b></label><br>
-    <input type="text"><br><br>
-    <label><b>Any suggestions or comments?</b></label><br>
-    <!-- Textarea field with a custom height & width -->
-    <textarea rows="10" style="width: 720px;"></textarea>
-    <br><br>
-    <!-- Submit button -->
-    <button type="submit">Submit</button>
+        <hr>
+        <h4>About you</h4>
+        <p>We will be mailing tickets to your email address</p>
+        <br>
+        <!-- Text field type -->
+        <label><b>Name</b><span style="color: red;">*</span></label><br>
+        <div style="display: flex; flex-direction: row;">
+            <div><input type="text"><br><small>First</small></div>
+            <div><input type="text"><br><small>Last</small></div>
+        </div>
+        <br>
+        <!-- Text field type, with a certain width -->
+        <div style="width: 720px;">
+            <label><b>Address</b><span style="color: red;">*</span></label><br>
+            <input type="text" style="width: 720px;">
+            <br><br>
+            <!-- Render successive div elements horizontally -->
+            <div style="display: flex; flex-direction: row;">
+                <div><input type="text"><br><small>City</small></div>
+                <div><input type="text"><br><small>State</small></div>
+            </div>
+            <br>
+            <!-- Render successive div elements horizontally -->
+            <div style="display: flex; flex-direction: row;">
+                <div><input type="text"><br><small>Postal code</small></div>
+                <div>
+                    <select id="country">
+                        <option value=""></option>
+                        <option value="India">India</option>
+                        <option value="America">America</option>
+                        <option value="UK">UK</option>
+                    </select><br>
+                    <small>Country</small>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <label><b>Email</b></label><br>
+        <input type="text"><br><br>
+        <label><b>Any suggestions or comments?</b></label><br>
+        <!-- Textarea field with a custom height & width -->
+        <textarea rows="10" style="width: 720px;"></textarea>
+        <br><br>
+        <!-- Submit button -->
+        <button type="submit">Submit</button>
+    </form>
 </body>
+
 </html>

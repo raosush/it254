@@ -1,0 +1,78 @@
+<!-- 1st task <=> Gallery -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <title>Sushanth Sathesh Rao</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Sushanth Sathesh Rao">
+        <meta name="description" content="Personal portfolio website">
+        <meta charset="utf-8">
+        <style>
+            /* Add background image to body element using CSS selector */
+            body {
+                background-image: url(assets/img/logo.png);
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 50% 50%;
+            }
+
+            /* CSS class to render an element as a row using flexbox model */
+            .row {
+                display: flex;
+                flex-direction: row;
+            }
+
+            /* CSS class to float an image to the left with a fixed width */
+            .gallery-item {
+                width: 420px;
+                float: left;
+                margin: 10px;
+            }
+
+            /* Select img element of a particular element with galleery-item class and assign 100% width */
+            .gallery-item > img {
+                width: 100%;
+            }
+        </style>
+    </head>
+    <div class="row">
+        <a href="/it254/assignment_1/profile.html">Task 2</a>&nbsp;&nbsp;&nbsp;
+        <a href="/it254/assignment_1/table.html">Task 3</a>&nbsp;&nbsp;&nbsp;
+        <a href="/it254/assignment_1/event_form.html">Task 4</a>&nbsp;&nbsp;&nbsp;
+        <a href="/it254/assignment_1/frameset.html">Task 5</a>
+    </div>
+    <!-- Added a background image to the body element, using CSS selector -->
+    <body>
+        <!-- Create a gallery in which each element floats to the left -->
+        <div class="gallery-item">
+            <a href="/it254/assignment_1/personal_description.html">
+                <img src="/it254/assignment_1/assets/img/hero-bg.jpg" width="420" height="420">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="/it254/assignment_1/nirf.html">
+                <img src="/it254/assignment_1/assets/img/campus_1.jpg" width="420" height="420">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="/it254/assignment_1/vidhyug.html">
+                <img src="/it254/assignment_1/assets/img/campus_2.jpg" width="420" height="420">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="/it254/assignment_1/campus.html">
+                <img src="/it254/assignment_1/assets/img/campus_3.jpg" width="420" height="420">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="/it254/assignment_1/campus.html">
+                <img src="/it254/assignment_1/assets/img/campus_4.jpg" width="420" height="420">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="/it254/assignment_1/main_building.html">
+                <img src="/it254/assignment_1/assets/img/main-building.jpeg" width="420" height="420">
+            </a>
+        </div>
+    </body>
+</html>

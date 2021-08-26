@@ -1,0 +1,74 @@
+<!-- Table for task 3 -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <!-- Styles to border the table according to the task -->
+        <style>
+            /* CSS selector to border table & cells */
+            table {
+                border: 5px solid grey;
+            }
+            th, td {
+                border: 1px solid black;
+            }
+        </style>
+        <title>HTML Tables</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Sushanth Sathesh Rao">
+        <meta name="description" content="HTML Tables">
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <table>
+            <tr>
+                <!-- Span a cell for 4 columns -->
+                <th colspan="4">
+                    Purchased Products
+                </th>
+            </tr>
+            <tr>
+                <!-- Span a cell for 2 rows -->
+                <th rowspan="2">Item Name</th>
+                <!-- Span a cell for 2 rows -->
+                <th rowspan="2">Item Picture</th>
+                <th>Item Description</th>
+                <th>Price</th>
+            </tr>
+            <!-- The remaining cells of second row -->
+            <tr>
+                <th>Shipping, Handling, etc</th>
+                <th>Expense</th>
+            </tr>
+            <tr>
+                <!-- Span a cell for 2 rows -->
+                <td rowspan="2">1</td>
+                <!-- Span a cell for 2 rows -->
+                <td rowspan="2"><img src="/it254/assignment_1/assets/img/campus_1.jpg" width="60" height="60"></td>
+                <td>NIRF Ranking</td>
+                <td>$400.00</td>
+            </tr>
+            <!-- The remaining cells of second row -->
+            <tr>
+                <td>Shipments</td>
+                <td>$10.00</td>
+            </tr>
+            <tr>
+                <!-- Span a cell for 2 rows -->
+                <td rowspan="2">2</td>
+                <!-- Span a cell for 2 rows -->
+                <td rowspan="2"><img src="/it254/assignment_1/assets/img/campus_2.jpg" width="60" height="60"></td>
+                <td>VidhYug</td>
+                <td>$1.00</td>
+            </tr>
+            <!-- The remaining cells of second row -->
+            <tr>
+                <td>Maintainence</td>
+                <td>$0.50</td>
+            </tr>
+            <!-- Span a cell for 4 columns -->
+            <tr>
+                <th colspan="4">Purchased Equipments(June 2006)</th>
+            </tr>
+        </table>
+    </body>
+</html>

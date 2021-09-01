@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>Practice Exercise 3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Sushanth Sathesh Rao">
+    <meta charset="utf-8">
+</head>
+
+<body onload="runDomMethods()">
+    <div id="test_div">Test div element</div>
+    <input type="text" id="text" onchange="handleChange()" placeholder="Enter random text">
+    <p id="input_value"></p>
+    <input type="email" id="email" placeholder="Enter email">
+</body>
+
+<script>
+    function runDomMethods() {
+        var test_div = document.getElementById('test_div');
+        // Change HTML element using innerHTML / innerText
+        // innerHTML unescapes HTML content which might lead to XSS
+        test_div.innerHTML = "Random change";
+        // Set any attribute using the `setAttribute` method
+        test_div.setAttribute('data-attribute', 'Some value');
+        // Attributes can be invoked on the object directly
+        document.getElementById('text').value;
+        document.getElementById('text').addEventListener('keyup', handleChange);
+    }
+
+    function handleChange() {
+        document.getElementById('input_value').innerHTML = document.getElementById('text').value;
+    }
+</script>
+
+</html>

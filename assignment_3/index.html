@@ -1,0 +1,38 @@
+<!-- 1st task <=> Gallery -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>Practice Exercise 3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Sushanth Sathesh Rao">
+    <meta charset="utf-8">
+</head>
+
+<body onload="counter(); perfCount();">
+    <div id="time_ticker">
+        <span id="time"></span>
+    </div>
+    <div id="for_execution">
+        <span id="execution_time"></span>
+    </div>
+</body>
+<script>
+    function counter() {
+        var dateObj = new Date();
+        var date = dateObj.getMonth() + 1 + "-" + dateObj.getDate() + "-" + dateObj.getFullYear();
+        dateObj = date + " - " + dateObj.getHours() + ":" + dateObj.getMinutes() + ":" + dateObj.getSeconds();
+        document.getElementById('time').innerHTML = dateObj;
+        setTimeout(counter, 1000);
+    }
+    function perfCount() {
+        var start = new Date().getTime();
+        for (var i = 0; i < 1000; ++i) {
+            console.log("Count: " + i);
+        }
+        var end = new Date().getTime();
+        document.getElementById('execution_time').innerHTML = `Execution time: ${(end - start)} ms`;
+    }
+</script>
+
+</html>

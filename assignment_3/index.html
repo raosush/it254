@@ -1,0 +1,54 @@
+<!-- 1st task <=> Gallery -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>Practice Exercise 3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Sushanth Sathesh Rao">
+    <meta charset="utf-8">
+</head>
+
+<body onload="counter(); perfCount();">
+    <div style="display: flex; flex-direction: row;">
+        <a href="/it254/assignment_3/slideshow.html">Task 2</a>&nbsp;&nbsp;&nbsp;
+        <a href="/it254/assignment_3/dom_test.html">Task 3</a>&nbsp;&nbsp;&nbsp;
+        <a href="/it254/assignment_3/form.html">Task 4</a>&nbsp;&nbsp;&nbsp;
+        <a href="/it254/assignment_3/validation.html">Adavnced Task 1</a>&nbsp;&nbsp;&nbsp;
+        <a href="/it254/assignment_3/calculate_amount.html">Advanced Task 2</a>
+    </div>
+    <div id="time_ticker">
+        <span id="time"></span>
+    </div>
+    <div id="for_execution">
+        <span id="execution_time"></span>
+    </div>
+</body>
+<script>
+    function counter() {
+        // Get a new Date object
+        var dateObj = new Date();
+        /* Display date in a particular format */
+        var date = dateObj.getMonth() + 1 + "-" + dateObj.getDate() + "-" + dateObj.getFullYear();
+        date = date + " - " + dateObj.getHours() + ":" + dateObj.getMinutes() + ":" + dateObj.getSeconds();
+        document.getElementById('time').innerHTML = date;
+        // Invoke the function at a delay of 1000ms
+        setTimeout(counter, 1000);
+    }
+
+    /* Function to count the amount of time required to execute a for loop */
+    function perfCount() {
+        // Create a new Date object before executing a loop
+        var start = new Date().getTime();
+        // Execute the loop
+        for (var i = 0; i < 1000; ++i) {
+            console.log("Count: " + i);
+        }
+        // Create a new Date object after executing a loop
+        var end = new Date().getTime();
+        // Display the difference in time which is also the execution time
+        document.getElementById('execution_time').innerHTML = `Execution time: ${(end - start)} ms`;
+    }
+</script>
+
+</html>

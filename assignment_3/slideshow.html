@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>Practice Exercise 3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Sushanth Sathesh Rao">
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <div id="image_div">
+        <img id="image" src="/assignment_3/assets/img/campus_3.jpg">
+    </div>
+    <div style="text-align: center; padding: 10px;">
+        <!-- Attach event listener -->
+        <button onclick="changeImage(0)">&lt;</button>
+        <button onclick="changeImage(1)">&gt;</button>
+    </div>
+</body>
+
+<script>
+    // Array to store the path to different images
+    const imgArray = [
+        '/assignment_3/assets/img/campus_3.jpg',
+        '/assignment_3/assets/img/campus_4.jpg',
+        '/assignment_3/assets/img/main-building.jpeg',
+        '/assignment_3/assets/img/mega-hostel.jpeg'
+    ];
+    // Store the index of current image being displayed
+    var curIndex = 0;
+    /* Function to switch between different images */
+    function changeImage(flag) {
+        // `flag` indicates if the user is navigating to the right or to the left
+        if (flag === 0) {
+            // Handle overflow
+            if (--curIndex < 0) {
+                curIndex = imgArray.length - 1;
+            }
+        } else if (flag === 1) {
+            // Handle overflow
+            if (++curIndex >= imgArray.length) {
+                curIndex = 0;
+            }
+        }
+        // Set the `src` attribute of image according to the current index
+        document.getElementById('image').setAttribute("src", imgArray[curIndex]);
+    }
+</script>
+
+</html>

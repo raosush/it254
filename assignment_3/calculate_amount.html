@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>Practice Exercise 3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Sushanth Sathesh Rao">
+    <meta charset="utf-8">
+    <style>
+        /* CSS to style the form */
+        table {
+            background-color: greenyellow;
+        }
+
+        td, th {
+            text-align: center;
+            padding: 15px 45px 15px 45px;
+        }
+
+        .border-input {
+            border: 0.5px solid orange;
+            text-align: right;
+            font-weight: bold;
+        }
+
+        tr>td:nth-child(2) {
+            font-weight: bold;
+        }
+
+        #calculate {
+            background-color: #1984c3;
+            color: #fff;
+            padding: 1em 5em;
+            text-decoration: none;
+            border: 0.25em solid #0f5177;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>Items</th>
+            <th>Price/kg</th>
+            <th>Quantity (in kg)</th>
+        </tr>
+        <tr>
+            <td>Item 1</td>
+            <td>100</td>
+            <td><input type="text" class="border-input" id="item_1"></td>
+        </tr>
+        <tr>
+            <td>Item 2</td>
+            <td>40</td>
+            <td><input type="text" class="border-input" id="item_2"></td>
+        </tr>
+        <tr>
+            <td>Item 3</td>
+            <td>25</td>
+            <td><input type="text" class="border-input" id="item_3"></td>
+        </tr>
+        <tfoot>
+            <td></td>
+            <td><button id="calculate">Click here to calculate amount</button></td>
+            <!-- Make this input readonly -->
+            <td><input type="text" class="border-input" id="amount" value="0" readonly></td>
+        </tfoot>
+    </table>
+</body>
+
+<script>
+    // Add a click event listener for the button
+    document.getElementById('calculate').addEventListener('click', calculateAmount);
+    const prices = [100, 40, 25];
+    /* Function to calculate amount */
+    function calculateAmount() {
+        var x = parseInt(document.getElementById('item_1').value);
+        x = isNaN(x) ? 0 : prices[0] * x;
+        var y = parseInt(document.getElementById('item_2').value);
+        y = isNaN(y) ? 0 : prices[1] * y;
+        var z = parseInt(document.getElementById('item_3').value);
+        z = isNaN(z) ? 0 : prices[2] * z;
+        /* Display the calculated amount */
+        document.getElementById('amount').value = (x + y + z);
+    }
+</script>
+
+</html>

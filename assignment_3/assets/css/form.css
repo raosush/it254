@@ -1,0 +1,19 @@
+.error {
+    color: red;
+}
+
+.success {
+    color: lightgreen;
+}
+
+.border-error {
+    border: 0.25em solid red;
+}
+
+.border-success {
+    border: 0.25em solid lightgreen;
+}
+
+.flex {
+    width: 50%;
+}

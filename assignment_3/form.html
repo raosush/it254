@@ -22,15 +22,20 @@
 
 <script>
     function displayDialog() {
+        /* Insert values of fields into an array */
         var t = [`Name: ${document.getElementById('name').value}\n`,
         `City: ${document.getElementById('city').value}\n`,
         `Email: ${document.getElementById('email').value}\n`,
         `Comments: ${document.getElementById('comments').value}\n`];
+        // Display the values in a dialog box
         document.getElementById('by_id').innerHTML = (t.join('\n'));
+
+        /* Insert values of fields into an array */
         var y = [`Name: ${document.getElementsByName('name_name')[0].value}`,
         `City: ${document.getElementsByName('name_city')[0].value}`,
         `Email: ${document.getElementsByName('name_email')[0].value}`,
         `Comments: ${document.getElementsByName('name_comments')[0].value}`];
+        // Display the values in a dialog box
         document.getElementById('by_name').innerHTML = (y.join('\n'))
     }
 </script>

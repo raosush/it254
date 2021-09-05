@@ -6,13 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Sushanth Sathesh Rao">
     <meta charset="utf-8">
+    <style>
+        #test_scroll {
+          border: 1px solid black;
+          width: 200px;
+          height: 100px;
+          overflow: scroll;
+        }
+    </style>
 </head>
 
+<!-- onload is fired after the given element loads -->
 <body onload="runDomMethods()">
     <div id="test_div">Test div element</div>
     <input type="text" id="text" onchange="handleChange()" placeholder="Enter random text">
     <p id="input_value"></p>
-    <input type="email" id="email" placeholder="Enter email">
+    <input type="email" id="email" onfocus="this.value = '';" placeholder="Enter email">
+    <!-- onerror is fired whenever there is an error while loading an image -->
+    <img src="/assignment_3/assets/img/campus_3.jpg" onerror="alert('Could not load image');">
+    <!-- onscroll is fired whenever the user scrolls in the div element -->
+    <div id="test_scroll" onscroll="handleScroll()">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        <br><br>
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
 </body>
 
 <script>
@@ -23,13 +41,18 @@
         test_div.innerHTML = "Random change";
         // Set any attribute using the `setAttribute` method
         test_div.setAttribute('data-attribute', 'Some value');
-        // Attributes can be invoked on the object directly
-        document.getElementById('text').value;
+        // Attributes of an object can be found using attributes method
+        console.log(test_div.attributes);
+        // Keyup event listener -> The callback is fired/invoked whenever the field has a user typing in values
         document.getElementById('text').addEventListener('keyup', handleChange);
     }
 
     function handleChange() {
         document.getElementById('input_value').innerHTML = document.getElementById('text').value;
+    }
+
+    function handleScroll() {
+        console.log('Scrolled the element');
     }
 </script>
 
